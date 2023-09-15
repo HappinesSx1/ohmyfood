@@ -1,0 +1,84 @@
+/* -------
+    HEADER
+    ------ */
+
+header {
+    background: #FFF;
+    height: auto;
+    @include centerdiv;
+    flex-direction: column;
+
+    .logo {
+        font-family: logoFont, cursive;
+        color: #000;
+
+        h1 {
+            display: block;
+            font-size: 2em;
+            font-weight: bold;
+            padding: 15px 0;
+        }
+    }
+
+    .localisation {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        padding: 20px 0;
+        color: #7a7a7a;;
+        background: #EAEAEA;
+
+        p {
+            margin-left: 15px;
+        }
+    }
+
+    .hero {
+        background: var(--main-bg-color);
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 0;
+
+        h2 {
+            font-size: 40px;
+        }
+        
+        > p {
+            font-size: 18px;
+            margin-top: 25px;
+        }
+        
+        .hero-btn {
+            background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
+            margin-top: 25px;
+            border-radius: 30px;
+            color : #FFF;
+            padding: 18px;
+            cursor: pointer;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+            transition: all 0.2s ease;
+            
+            &:hover {
+                filter: brightness(1.15);
+            }
+        }
+    }
+}
+    
+    
+    
+
+    /* -----
+        MAIN
+        ---- */
+    
+    
+    
+    /* -----
+        HERO
+        ---- */
+    
+    

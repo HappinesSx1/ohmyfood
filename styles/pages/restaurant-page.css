@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+@font-face {
+  font-family: logoFont;
+  src: url(../assets/fonts/Shrikhand-Regular.ttf);
+}
+:root {
+  --main-color: #9356DC;
+  --new-patch-color: #99E2D0;
+  --main-bg-color: #F6F6F6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: var(--main-bg-color);
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+footer {
+  margin-top: 30px;
+  background: #353535;
+  color: #FFFFFF;
+  height: 114px;
+}
+footer .footer-containeur {
+  height: 100%;
+  padding: 30px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-end;
+  gap: 16px;
+}
+footer .footer-containeur img {
+  height: 27px;
+  filter: invert(97%) sepia(100%) saturate(16%) hue-rotate(45deg) brightness(105%) contrast(100%);
+}
+footer .footer-containeur h5 {
+  font-family: logoFont, cursive;
+  height: 27px;
+  font-size: 18px;
+  padding: 20px 0;
+}
+footer .footer-containeur .options {
+  display: flex;
+}
+footer .footer-containeur .options .option-card {
+  display: flex;
+}
+footer .footer-containeur .options .option-card p {
+  min-width: 130px;
+  font-size: 16px;
+  color: white;
+}
+footer .footer-containeur .options .cardi {
+  min-width: 190px;
+}
+@media (max-width: 750px) {
+  footer .footer-containeur .options {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+@media (max-width: 750px) {
+  footer .footer-containeur {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+}/*# sourceMappingURL=restaurant-page.css.map */

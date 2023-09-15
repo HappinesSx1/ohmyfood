@@ -58,13 +58,6 @@ h1 {
     MAIN
     ---- */
 
-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
 .localisation {
     display: flex;
     width: 100%;
@@ -123,7 +116,16 @@ main {
 /* ---------------
     FONCTIONNEMENT
     -------------- */
+/* -----
+    MAIN
+    ---- */
 
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
 
 .fonctionnement {
     background: #FFF;
@@ -392,5 +394,6 @@ footer {
     .options {
         flex-direction: column;
         gap: 15px;
+        flex-direction: flex-start;
     }
 }

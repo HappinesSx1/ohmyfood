@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@font-face {
+    font-family: logoFont;
+    src: url(../assets/fonts/Shrikhand-Regular.ttf);
+}
+
+:root {
+    --main-color: #9356DC;
+    --new-patch-color: #99E2D0;
+    --main-bg-color: #F6F6F6;
+}
+
+@mixin centerdiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: var(--main-bg-color);
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
