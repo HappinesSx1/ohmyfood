@@ -7,7 +7,10 @@
 :root {
     --main-color: #9356DC;
     --new-patch-color: #99E2D0;
+    --new-text-color: #008766;
     --main-bg-color: #F6F6F6;
+    --location-bg-color: #EAEAEA;
+    --location-txt-color: #353535;
 }
 
 @mixin centerdiv {
@@ -30,4 +33,23 @@ body {
 a {
     text-decoration: none;
     color: #000;
+}
+
+.coeur-plein {
+    opacity: 0;
+    position: absolute;
+    stroke: none;
+    fill: url(#text-fill);
+    width: 22px;
+    stroke-width: 30;
+    transition: all 1s ease;
+}
+    
+.coeur-vide {
+    width: 22px;
+    stroke-width: 30;
+    stroke: black;
+    fill: white;
+    cursor: pointer;
+    transition: all 1s ease;
 }
