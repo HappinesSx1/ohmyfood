@@ -1,0 +1,223 @@
+main {
+    background: #FFF;
+    max-width: 1440px;
+    padding: 0;
+
+    .main-container {
+        position: relative;
+        top: -50px;
+        border-radius: 30px 30px 0 0;
+        background: #F6F6F6;
+        display: flex;
+        flex-direction: column;
+        padding: 40px 10px 10px;
+        gap: 40px;
+
+        .main-title {        
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 10px;
+    
+            h2 {
+                font-family: 'Shrikhand';
+                font-size: 28px;
+                font-weight: 400;
+            }
+            .favorite-btn {
+                    &:hover .coeur-plein {
+                    opacity: 1;
+                    }
+                    &:hover .coeur-vide {
+                        stroke: none;
+                    }
+            }
+        }
+        .menu {
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr;
+            gap: 40px;
+
+            .tittle {
+                h4 {
+                    font-size: 1.3rem;
+                    font-weight: 200;
+                    text-transform: uppercase;
+                    position: relative;
+
+                    &::before {
+                        content: "";
+                        height: 5px;
+                        width: 50px;
+                        background: #99E2D0;
+                        position: absolute;
+                        bottom: -5px;
+                        left: 5px;
+                    }
+                }
+            }
+            .menu-containeur {
+                margin-top: 30px;
+                display: grid;
+                grid-template-rows: 1fr 1fr 1fr;
+                gap: 15px;
+                .delay {
+                    animation: delay 1s both;
+                }
+                
+                #cas-1 {
+                    animation-delay: 0.1s;
+                }
+                #cas-2 {
+                    animation-delay: 0.2s;
+                }
+                #cas-3 {
+                    animation-delay: 0.3s;
+                }
+                #cas-4 {
+                    animation-delay: 0.4s;
+                }
+                #cas-5 {
+                    animation-delay: 0.5s;
+                }
+                #cas-6 {
+                    animation-delay: 0.6s;
+                }
+                #cas-7 {
+                    animation-delay: 0.7s;
+                }
+                #cas-8 {
+                    animation-delay: 0.8s;
+                }
+                #cas-9 {
+                    animation-delay: 0.9s;
+                }
+                
+                .menu-choix {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    height: 70px;
+                    background: #FFFFFF;
+                    border-radius: 15px;
+                    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+                    position: relative;
+                    overflow: hidden;
+                    cursor: pointer;
+
+                    &:hover .price {
+                        padding-right: 50px;
+                        transition: 0.5s ease;
+                    }
+                    &:hover .validation {
+                        width: 60px;
+                    }
+                    
+                    &:hover .validation i {
+                        font-size: 30px;
+                        display: block;
+                    }
+
+                    .plat-et-prix {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        width: 100%;
+                    }
+                    
+                    .description {
+                        margin-left: 20px;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        h6 {
+                            font-size: 1.1rem;
+                            margin: 0;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                        }
+                        
+                        p {
+                            display: block;
+                            font-size: 0.9rem;
+                            margin: 0;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            white-space: nowrap;
+                        }
+                    }
+                    .price {
+                        margin-right: 20px;
+                    }
+                    
+                    
+                    .validation {
+                        position: absolute;
+                        background: #99E2D0;
+                        height: 100%;
+                        right: 0;
+                        width: 0;
+                        border-radius: 0 15px 15px 0;
+                        transition: 0.6s ease;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    
+                        i {
+                            display: none;
+                            font-size: 0;
+                            /* animation: rotate 0.5s both; */
+                            animation-delay: 0.2s;
+                            color: #FFFFFF;
+                        }
+                    }
+                } 
+                .btn-containeur {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    
+                    .btn {
+                        background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
+                        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+                        border-radius: 30px;
+                        color : #FFF;
+                        width: 186px;
+                        height: 50px;
+                        text-align: center;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        cursor: pointer;
+                        transition: all 0.2s ease;
+                    
+                        p {
+                            font-size: 16px;
+                        }
+                        
+                        &:hover {
+                            filter: brightness(1.15);
+                        }
+                    }
+                }                
+            }
+        }
+
+    }
+    @media (min-width : 1045px) {
+        padding: 0 190px;
+    }
+
+}
+
+@keyframes delay {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+

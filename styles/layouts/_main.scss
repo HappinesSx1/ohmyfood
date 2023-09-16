@@ -8,12 +8,19 @@ main {
 
         .fonctionnement-containeur {
             padding: 50px 0 70px;
-            max-width: 1444px;
             margin: 0 auto;
 
             h2 {
                 font-size: 24px;
                 margin-left: 15px;
+
+                @media (min-width: 767.98px) {
+                    text-align: center;
+                }
+                @media (min-width: 1045px) {
+                    text-align: start;
+                }
+                
             }
 
             .choix-container {
@@ -107,6 +114,16 @@ main {
                 top: 50%;
                 transform: translate(-50%, -50%);
                 }
+
+                @media (min-width: 1045px) {
+                    flex-direction: row;
+                    width: 100%;
+                }
+            }
+
+            @media (min-width: 1045px) {
+                max-width: 1444px;
+                padding: 50px 180px 70px;
             }
         }
     }
@@ -121,9 +138,10 @@ width: 100%;
 background: var(--main-bg-color);
 
     .restaurants-container {
-    margin-top: 30px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    padding: 50px 18px;
 
         h2 {
             font-size: 24px;;
@@ -133,14 +151,16 @@ background: var(--main-bg-color);
         display: grid;
         grid-template-columns: 1fr;
         gap: 18px;
-        margin-top: 40px;
+        margin-top: 30px;
+        width: 100%;
 
             .resto-card {
+            margin: 0 auto;
             background: #FFFFFF;
             border-radius: 30px;
-            // max-width: 490px;
             height: 251px;
             min-width: 306px;
+            max-width: 490px;
             flex-shrink: 0;
             box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
             position: relative;
@@ -202,12 +222,16 @@ background: var(--main-bg-color);
                         &:hover .coeur-plein {
                         opacity: 1;
                         }
-                        &:hover .coeur-vide {
-                            stroke: none;
-                        }
                     }
                 }
             }
+            @media (min-width: 1045px) {
+                grid-template-columns: 1fr 1fr;
+                gap: 50px 100px;
+            }
+        }
+        @media (min-width: 1045px) {
+            padding: 0 180px;
         }
     }
 }

@@ -1,8 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
-@font-face {
-  font-family: logoFont;
-  src: url(../assets/fonts/Shrikhand-Regular.ttf);
-}
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 :root {
   --main-color: #9356DC;
   --new-patch-color: #99E2D0;
@@ -35,18 +32,239 @@ a {
   fill: url(#text-fill);
   width: 22px;
   stroke-width: 30;
-  transition: all 1s ease;
+  transition: all 0.8s ease;
 }
 
-.coeur-vide {
-  width: 22px;
-  stroke-width: 30;
-  stroke: black;
-  fill: white;
+header {
+  height: auto;
+  box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+header .fa-arrow-left {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+}
+header .logo {
+  padding: 14px 98px;
+}
+header .logo img {
+  width: 162px;
+}
+
+.image img {
+  width: 100%;
+  height: 275px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+  z-index: -2;
+}
+
+main {
+  background: #FFF;
+  max-width: 1440px;
+  padding: 0;
+}
+main .main-container {
+  position: relative;
+  top: -50px;
+  border-radius: 30px 30px 0 0;
+  background: #F6F6F6;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 10px 10px;
+  gap: 40px;
+}
+main .main-container .main-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+main .main-container .main-title h2 {
+  font-family: "Shrikhand";
+  font-size: 28px;
+  font-weight: 400;
+}
+main .main-container .main-title .favorite-btn:hover .coeur-plein {
+  opacity: 1;
+}
+main .main-container .main-title .favorite-btn:hover .coeur-vide {
+  stroke: none;
+}
+main .main-container .menu {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 40px;
+}
+main .main-container .menu .tittle h4 {
+  font-size: 1.3rem;
+  font-weight: 200;
+  text-transform: uppercase;
+  position: relative;
+}
+main .main-container .menu .tittle h4::before {
+  content: "";
+  height: 5px;
+  width: 50px;
+  background: #99E2D0;
+  position: absolute;
+  bottom: -5px;
+  left: 5px;
+}
+main .main-container .menu .menu-containeur {
+  margin-top: 30px;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 15px;
+}
+main .main-container .menu .menu-containeur .delay {
+  animation: delay 1s both;
+}
+main .main-container .menu .menu-containeur #cas-1 {
+  animation-delay: 0.1s;
+}
+main .main-container .menu .menu-containeur #cas-2 {
+  animation-delay: 0.2s;
+}
+main .main-container .menu .menu-containeur #cas-3 {
+  animation-delay: 0.3s;
+}
+main .main-container .menu .menu-containeur #cas-4 {
+  animation-delay: 0.4s;
+}
+main .main-container .menu .menu-containeur #cas-5 {
+  animation-delay: 0.5s;
+}
+main .main-container .menu .menu-containeur #cas-6 {
+  animation-delay: 0.6s;
+}
+main .main-container .menu .menu-containeur #cas-7 {
+  animation-delay: 0.7s;
+}
+main .main-container .menu .menu-containeur #cas-8 {
+  animation-delay: 0.8s;
+}
+main .main-container .menu .menu-containeur #cas-9 {
+  animation-delay: 0.9s;
+}
+main .main-container .menu .menu-containeur .menu-choix {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  background: #FFFFFF;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
   cursor: pointer;
-  transition: all 1s ease;
+}
+main .main-container .menu .menu-containeur .menu-choix:hover .price {
+  padding-right: 50px;
+  transition: 0.5s ease;
+}
+main .main-container .menu .menu-containeur .menu-choix:hover .validation {
+  width: 60px;
+}
+main .main-container .menu .menu-containeur .menu-choix:hover .validation i {
+  font-size: 30px;
+  display: block;
+}
+main .main-container .menu .menu-containeur .menu-choix .plat-et-prix {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+main .main-container .menu .menu-containeur .menu-choix .description {
+  margin-left: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+main .main-container .menu .menu-containeur .menu-choix .description h6 {
+  font-size: 1.1rem;
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+main .main-container .menu .menu-containeur .menu-choix .description p {
+  display: block;
+  font-size: 0.9rem;
+  margin: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+main .main-container .menu .menu-containeur .menu-choix .price {
+  margin-right: 20px;
+}
+main .main-container .menu .menu-containeur .menu-choix .validation {
+  position: absolute;
+  background: #99E2D0;
+  height: 100%;
+  right: 0;
+  width: 0;
+  border-radius: 0 15px 15px 0;
+  transition: 0.6s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .main-container .menu .menu-containeur .menu-choix .validation i {
+  display: none;
+  font-size: 0;
+  /* animation: rotate 0.5s both; */
+  animation-delay: 0.2s;
+  color: #FFFFFF;
+}
+main .main-container .menu .menu-containeur .btn-containeur {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+main .main-container .menu .menu-containeur .btn-containeur .btn {
+  background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 30px;
+  color: #FFF;
+  width: 186px;
+  height: 50px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+main .main-container .menu .menu-containeur .btn-containeur .btn p {
+  font-size: 16px;
+}
+main .main-container .menu .menu-containeur .btn-containeur .btn:hover {
+  filter: brightness(1.15);
+}
+@media (min-width: 1045px) {
+  main {
+    padding: 0 190px;
+  }
 }
 
+@keyframes delay {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 footer {
   margin-top: 30px;
   background: var(--location-txt-color);
@@ -62,6 +280,7 @@ footer .footer-containeur {
 }
 footer .footer-containeur img {
   height: 27px;
+  width: 139px;
   filter: invert(97%) sepia(100%) saturate(16%) hue-rotate(45deg) brightness(105%) contrast(100%);
 }
 footer .footer-containeur .options {
@@ -79,6 +298,10 @@ footer .footer-containeur .options .option-card p {
 }
 footer .footer-containeur .options .cardi {
   min-width: 190px;
+  gap: 15px;
+}
+footer .footer-containeur .options .cardi i {
+  width: 11px;
 }
 @media (min-width: 750px) {
   footer .footer-containeur {

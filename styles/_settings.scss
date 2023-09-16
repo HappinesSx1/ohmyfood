@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-@font-face {
-    font-family: logoFont;
-    src: url(../assets/fonts/Shrikhand-Regular.ttf);
-}
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 
 :root {
     --main-color: #9356DC;
@@ -42,14 +39,14 @@ a {
     fill: url(#text-fill);
     width: 22px;
     stroke-width: 30;
-    transition: all 1s ease;
+    transition: all 0.8s ease;
 }
     
-.coeur-vide {
-    width: 22px;
-    stroke-width: 30;
-    stroke: black;
-    fill: white;
-    cursor: pointer;
-    transition: all 1s ease;
-}
+// .coeur-vide {
+//     width: 22px;
+//     stroke-width: 30;
+//     stroke: black;
+//     fill: white;
+//     cursor: pointer;
+//     transition: all 1s ease;
+// }

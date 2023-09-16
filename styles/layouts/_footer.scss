@@ -13,6 +13,7 @@ footer {
 
         img {
             height: 27px;
+            width: 139px;
             filter: invert(97%) sepia(100%) saturate(16%) hue-rotate(45deg) brightness(105%) contrast(100%);
         }
 
@@ -31,6 +32,11 @@ footer {
             }
             .cardi {
                 min-width: 190px;
+                gap: 15px;
+
+                i {
+                    width: 11px;
+                }
             }
         }
         @media (min-width: 750px) {

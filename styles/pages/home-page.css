@@ -1,8 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
-@font-face {
-  font-family: logoFont;
-  src: url(../assets/fonts/Shrikhand-Regular.ttf);
-}
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 :root {
   --main-color: #9356DC;
   --new-patch-color: #99E2D0;
@@ -35,16 +32,7 @@ a {
   fill: url(#text-fill);
   width: 22px;
   stroke-width: 30;
-  transition: all 1s ease;
-}
-
-.coeur-vide {
-  width: 22px;
-  stroke-width: 30;
-  stroke: black;
-  fill: white;
-  cursor: pointer;
-  transition: all 1s ease;
+  transition: all 0.8s ease;
 }
 
 /* -------
@@ -124,12 +112,6 @@ header .hero .hero-btn p {
   font-weight: 500;
 }
 
-/* -----
-    MAIN
-    ---- */
-/* -----
-    HERO
-    ---- */
 main {
   display: flex;
   justify-content: center;
@@ -142,12 +124,21 @@ main .fonctionnement {
 }
 main .fonctionnement .fonctionnement-containeur {
   padding: 50px 0 70px;
-  max-width: 1444px;
   margin: 0 auto;
 }
 main .fonctionnement .fonctionnement-containeur h2 {
   font-size: 24px;
   margin-left: 15px;
+}
+@media (min-width: 767.98px) {
+  main .fonctionnement .fonctionnement-containeur h2 {
+    text-align: center;
+  }
+}
+@media (min-width: 1045px) {
+  main .fonctionnement .fonctionnement-containeur h2 {
+    text-align: start;
+  }
 }
 main .fonctionnement .fonctionnement-containeur .choix-container {
   display: flex;
@@ -236,6 +227,18 @@ main .fonctionnement .fonctionnement-containeur .choix-container .choix-trois::b
   top: 50%;
   transform: translate(-50%, -50%);
 }
+@media (min-width: 1045px) {
+  main .fonctionnement .fonctionnement-containeur .choix-container {
+    flex-direction: row;
+    width: 100%;
+  }
+}
+@media (min-width: 1045px) {
+  main .fonctionnement .fonctionnement-containeur {
+    max-width: 1444px;
+    padding: 50px 180px 70px;
+  }
+}
 
 /* ------------
 RESTAUTANTS
@@ -245,9 +248,10 @@ RESTAUTANTS
   background: var(--main-bg-color);
 }
 .restaurants .restaurants-container {
-  margin-top: 30px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  padding: 50px 18px;
 }
 .restaurants .restaurants-container h2 {
   font-size: 24px;
@@ -256,13 +260,16 @@ RESTAUTANTS
   display: grid;
   grid-template-columns: 1fr;
   gap: 18px;
-  margin-top: 40px;
+  margin-top: 30px;
+  width: 100%;
 }
 .restaurants .restaurants-container .resto-cards .resto-card {
+  margin: 0 auto;
   background: #FFFFFF;
   border-radius: 30px;
   height: 251px;
   min-width: 306px;
+  max-width: 490px;
   flex-shrink: 0;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
   position: relative;
@@ -323,8 +330,16 @@ RESTAUTANTS
 .restaurants .restaurants-container .resto-cards .resto-card .card-block .block-right:hover .coeur-plein {
   opacity: 1;
 }
-.restaurants .restaurants-container .resto-cards .resto-card .card-block .block-right:hover .coeur-vide {
-  stroke: none;
+@media (min-width: 1045px) {
+  .restaurants .restaurants-container .resto-cards {
+    grid-template-columns: 1fr 1fr;
+    gap: 50px 100px;
+  }
+}
+@media (min-width: 1045px) {
+  .restaurants .restaurants-container {
+    padding: 0 180px;
+  }
 }
 
 footer {
@@ -342,6 +357,7 @@ footer .footer-containeur {
 }
 footer .footer-containeur img {
   height: 27px;
+  width: 139px;
   filter: invert(97%) sepia(100%) saturate(16%) hue-rotate(45deg) brightness(105%) contrast(100%);
 }
 footer .footer-containeur .options {
@@ -359,6 +375,10 @@ footer .footer-containeur .options .option-card p {
 }
 footer .footer-containeur .options .cardi {
   min-width: 190px;
+  gap: 15px;
+}
+footer .footer-containeur .options .cardi i {
+  width: 11px;
 }
 @media (min-width: 750px) {
   footer .footer-containeur {
