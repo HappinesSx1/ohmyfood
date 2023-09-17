@@ -28,9 +28,6 @@ a {
 .coeur-plein {
   opacity: 0;
   position: absolute;
-  stroke: none;
-  fill: url(#text-fill);
-  width: 22px;
   stroke-width: 30;
   transition: all 0.8s ease;
 }
@@ -63,23 +60,23 @@ header .logo img {
   -o-object-fit: cover;
      object-fit: cover;
   position: relative;
-  z-index: -2;
+  z-index: 2;
 }
 
 main {
   background: #FFF;
-  max-width: 1440px;
   padding: 0;
 }
 main .main-container {
+  margin-top: -50px;
   position: relative;
-  top: -50px;
   border-radius: 30px 30px 0 0;
   background: #F6F6F6;
   display: flex;
   flex-direction: column;
-  padding: 40px 10px 10px;
+  padding: 40px 10px 40px;
   gap: 40px;
+  z-index: 3;
 }
 main .main-container .main-title {
   display: flex;
@@ -92,11 +89,21 @@ main .main-container .main-title h2 {
   font-size: 28px;
   font-weight: 400;
 }
+main .main-container .main-title .favorite-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
 main .main-container .main-title .favorite-btn:hover .coeur-plein {
   opacity: 1;
 }
-main .main-container .main-title .favorite-btn:hover .coeur-vide {
-  stroke: none;
+@media (min-width: 1045px) {
+  main .main-container .main-title {
+    margin-top: 40px;
+    justify-content: center;
+    gap: 30px;
+  }
 }
 main .main-container .menu {
   display: grid;
@@ -226,12 +233,13 @@ main .main-container .menu .menu-containeur .menu-choix .validation i {
   animation-delay: 0.2s;
   color: #FFFFFF;
 }
-main .main-container .menu .menu-containeur .btn-containeur {
+main .main-container .btn-containeur {
   width: 100%;
   display: flex;
   justify-content: center;
+  padding-bottom: 40px;
 }
-main .main-container .menu .menu-containeur .btn-containeur .btn {
+main .main-container .btn-containeur .btn {
   background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
   border-radius: 30px;
@@ -245,15 +253,22 @@ main .main-container .menu .menu-containeur .btn-containeur .btn {
   cursor: pointer;
   transition: all 0.2s ease;
 }
-main .main-container .menu .menu-containeur .btn-containeur .btn p {
+main .main-container .btn-containeur .btn p {
   font-size: 16px;
 }
-main .main-container .menu .menu-containeur .btn-containeur .btn:hover {
+main .main-container .btn-containeur .btn:hover {
   filter: brightness(1.15);
+}
+@media (min-width: 1045px) {
+  main .main-container {
+    padding: 0 15%;
+  }
 }
 @media (min-width: 1045px) {
   main {
     padding: 0 190px;
+    margin: 0 auto;
+    width: 100%;
   }
 }
 
@@ -266,7 +281,6 @@ main .main-container .menu .menu-containeur .btn-containeur .btn:hover {
   }
 }
 footer {
-  margin-top: 30px;
   background: var(--location-txt-color);
   color: #FFFFFF;
 }
@@ -304,8 +318,14 @@ footer .footer-containeur .options .cardi i {
   width: 11px;
 }
 @media (min-width: 750px) {
+  footer .footer-containeur .options {
+    flex-direction: row;
+  }
+}
+@media (min-width: 750px) {
   footer .footer-containeur {
     flex-direction: row-reverse;
     align-items: flex-end;
+    height: 92px;
   }
 }/*# sourceMappingURL=restaurant-page.css.map */

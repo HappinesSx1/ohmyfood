@@ -28,9 +28,6 @@ a {
 .coeur-plein {
   opacity: 0;
   position: absolute;
-  stroke: none;
-  fill: url(#text-fill);
-  width: 22px;
   stroke-width: 30;
   transition: all 0.8s ease;
 }
@@ -138,6 +135,7 @@ main .fonctionnement .fonctionnement-containeur h2 {
 @media (min-width: 1045px) {
   main .fonctionnement .fonctionnement-containeur h2 {
     text-align: start;
+    margin: 0;
   }
 }
 main .fonctionnement .fonctionnement-containeur .choix-container {
@@ -235,7 +233,6 @@ main .fonctionnement .fonctionnement-containeur .choix-container .choix-trois::b
 }
 @media (min-width: 1045px) {
   main .fonctionnement .fonctionnement-containeur {
-    max-width: 1444px;
     padding: 50px 180px 70px;
   }
 }
@@ -250,7 +247,7 @@ RESTAUTANTS
 .restaurants .restaurants-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
   padding: 50px 18px;
 }
 .restaurants .restaurants-container h2 {
@@ -336,14 +333,19 @@ RESTAUTANTS
     gap: 50px 100px;
   }
 }
+@media (min-width: 767.98px) {
+  .restaurants .restaurants-container {
+    align-items: center;
+  }
+}
 @media (min-width: 1045px) {
   .restaurants .restaurants-container {
-    padding: 0 180px;
+    padding: 28px 180px;
+    align-items: start;
   }
 }
 
 footer {
-  margin-top: 30px;
   background: var(--location-txt-color);
   color: #FFFFFF;
 }
@@ -381,8 +383,14 @@ footer .footer-containeur .options .cardi i {
   width: 11px;
 }
 @media (min-width: 750px) {
+  footer .footer-containeur .options {
+    flex-direction: row;
+  }
+}
+@media (min-width: 750px) {
   footer .footer-containeur {
     flex-direction: row-reverse;
     align-items: flex-end;
+    height: 92px;
   }
 }/*# sourceMappingURL=home-page.css.map */
