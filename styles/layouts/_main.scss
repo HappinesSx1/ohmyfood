@@ -185,7 +185,7 @@ background: var(--main-bg-color);
                     }
                 }
             
-                img {
+                > img {
                 display: block;
                 object-fit: cover;
                 height: 231px;
@@ -216,7 +216,9 @@ background: var(--main-bg-color);
                     }
 
                     .block-right {
-                    @include centerdiv;
+                        @include centerdiv;
+                        width: 22px;
+                        height: 23px;
 
                         &:hover .coeur-plein {
                         opacity: 1;

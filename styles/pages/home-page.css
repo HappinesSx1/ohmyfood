@@ -292,7 +292,7 @@ RESTAUTANTS
 .restaurants .restaurants-container .resto-cards .resto-card .nouveau-patch p {
   font-size: 14px;
 }
-.restaurants .restaurants-container .resto-cards .resto-card img {
+.restaurants .restaurants-container .resto-cards .resto-card > img {
   display: block;
   -o-object-fit: cover;
      object-fit: cover;
@@ -323,6 +323,8 @@ RESTAUTANTS
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 22px;
+  height: 23px;
 }
 .restaurants .restaurants-container .resto-cards .resto-card .card-block .block-right:hover .coeur-plein {
   opacity: 1;
